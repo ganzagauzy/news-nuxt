@@ -8,25 +8,21 @@
         :key="cardinfo.id"
         :cardssection="cardinfo"
       />
-      <smcarddisplay
-        v-for="cardinfo in smcardsections"
-        :key="cardinfo.id"
-        :cardsection="cardinfo"
-      />
+
   </div>
 </template>
 
 <script>
-import { lgcardsections, smcardsections } from "@/assets/data.js";
-import smcarddisplay from "@/components/smcarddisplay.vue";
+import { lgcardsections,  } from "@/assets/data.js";
+
 import navigation from "@/components/nav.vue";
 export default {
-  components: { smcarddisplay, navigation },
+  components: { navigation },
 
    data() {
     return {
       lgcardinfo: lgcardsections,
-      smcardsections,
+
     };
   },
 
